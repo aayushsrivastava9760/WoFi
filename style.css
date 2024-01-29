@@ -1,0 +1,41 @@
+p {
+    padding: 5px;
+    font-size: 16px;
+    min-width: 100px;
+    font-family: system-ui;
+    width: 500px;
+    box-shadow: rgb(201, 227, 239) 0px 7px 29px 0px;
+}
+
+.wordTitle {
+    font-size: xx-large;
+}
+
+.wordWrapper{
+    padding: 10px;
+}
+
+.wordInput {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.wordInput:focus{
+    outline: none;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    color: #fafafa;
+    background: #3884c2;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #0d4474;
+}
