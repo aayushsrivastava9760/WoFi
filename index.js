@@ -1,10 +1,13 @@
 const searchBtn = document.getElementById("searchBtn");
 const inputWord = document.getElementById("word");
 
+const wordBlock = document.getElementById("wordBlock");
+const messageBlock = document.getElementById("messageBlock");
+
 const wordTitle = document.getElementById("wordTitle");
 const wordPhonetic = document.getElementById("wordPhonetic");
 const wordMeaning = document.getElementById("wordMeaning");
-const wordExample = document.getElementById("wordExample");
+const message = document.getElementById("message")
 
 const searchedWordTemplate = {
     word : "",
@@ -25,15 +28,10 @@ const getMeaning = (data) => {
     return data[0].meanings[0].definitions[0].definition;
 }
 
-const getExample = (data) => {
-    return data[0].meanings[0].definitions[0].example;
-}
-
 const updateSearchedWordTemplate = (data) => {
     searchedWordTemplate.word = getWord();
     searchedWordTemplate.phonetic = getPhonetic(data);
     searchedWordTemplate.meaning = getMeaning(data);
-    searchedWordTemplate.example = getExample(data);
 }
 
 const updateWordMeaning = () => {
@@ -48,22 +46,49 @@ const updateWordPhonetic = () => {
     wordPhonetic.innerText = searchedWordTemplate.phonetic;
 }
 
-const updateWordExample = () => {
-    wordExample.innerText = searchedWordTemplate.example;
+const displayData = (data) => {
+    updateSearchedWordTemplate(data);
+        
+    updateWordTitle();
+    updateWordPhonetic();
+    updateWordMeaning();
+
+    wordBlock.style.display = "block";
+}
+
+const updateErrorMessage = (data) => {
+    message.innerText = data.message;
+    messageBlock.style.display = "block";
+}
+
+const displayErrorMessage = (data) => {
+    updateErrorMessage(data);
+}
+
+const isWordFound = (data) => {
+    return !(data.message);
+}
+
+const resetBlocks = () => {
+    wordBlock.style.display = "none";
+    messageBlock.style.display = "none";
 }
 
 const searchWord = async () => {
+
+    resetBlocks();
+
     try {
         const word = getWord();
         const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         const data = await res.json();
 
-        updateSearchedWordTemplate(data);
-        
-        updateWordTitle();
-        updateWordPhonetic();
-        updateWordMeaning();
-        updateWordExample();
+        if(isWordFound(data)){
+            displayData(data);
+        }else{
+            displayErrorMessage(data);
+        }
+
     } catch (error) {
         throw new Error("Something went wrong ...");
     }

@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-	<input class="wordInput" id="word" placeholder="Search for the word..." />
-    <button class="btn" type="button" id="searchBtn">Search</button>
+    <div class="formWrapper">
+      <input class="wordInput" id="word" placeholder="Search for the word..." />
+      <button class="btn" type="button" id="searchBtn">Search</button>
+    </div>
 
-    <div class="wordWrapper">
-        <p class="wordTitle" id="wordTitle">Title</p>
-        <p id="wordPhonetic">Phonetic</p>
-        <p id="wordMeaning">Meaning</p>
-        <p id="wordExample">Example</p>
+    <div id="wordBlock" class="wordWrapper">
+      <p class="wordTitle" id="wordTitle">Title</p>
+      <p id="wordPhonetic">Phonetic</p>
+      <p id="wordMeaning">Meaning</p>
+    </div>
+
+    <div id="messageBlock" class="messageWrapper">
+      <p id="message" class="msg"></p>
     </div>
     <script src="index.js"></script>
   </body>
