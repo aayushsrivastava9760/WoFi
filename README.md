@@ -28,9 +28,16 @@ git clone https://github.com/aayushsrivastava9760/WoFi.git
 
 1. Click on the extension icon in the extensions.
 
+![Extension Image](./public/extensionImg.png)
+
 2. A popup will appear at the top, enter the word and click Search.
 
+![Popup Image](./public/popupImg.png)
+
 3. The result will be displayed.
+
+![Result Image](./public/resultImg.png)
+![Error Image](./public/errorImg.png)
 
 ## Author
 
