@@ -30,9 +30,13 @@ git clone https://github.com/aayushsrivastava9760/WoFi.git
 
 ![Extension Image](./public/extensionImg.png)
 
+<hr>
+
 2. A popup will appear at the top, enter the word and click Search.
 
 ![Popup Image](./public/popupImg.png)
+
+<hr>
 
 3. The result will be displayed.
 
