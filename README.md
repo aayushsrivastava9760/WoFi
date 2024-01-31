@@ -15,8 +15,8 @@ git clone https://github.com/aayushsrivastava9760/WoFi.git
 ### Setting up the Extension
 
 1. Open the extension page in google chrome. ( Follow any of the way given below )
-- Option 1: Type `chrome://extensions` in the URL bar and press enter.
-- Option 2: Click on the three dots in the top right of the browser, then click "More Tools" then click "Extensions".
+**Option 1:** Type `chrome://extensions` in the URL bar and press enter.
+**Option 2:** Click on the three dots in the top right of the browser, then click "More Tools" then click "Extensions".
 
 2. Turn on the switch on the top right of the page that says "Developer mode".
 
@@ -34,7 +34,7 @@ git clone https://github.com/aayushsrivastava9760/WoFi.git
 
 ## Author
 
-- ** Aayush Srivastava **
+- **Aayush Srivastava**
 
 ### Aknowledgements
 
